@@ -4,13 +4,24 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import './index.css'
 
-import App from './App.jsx'
+import Layout from './components/Layout'
+import App    from './App.jsx'
+import Login  from './pages/auth/login'
+import Signup from './pages/auth/signup'
+import RequireAuth from './components/RequireAuth'
 
 const router = createBrowserRouter([
-  { path: '/', element: <App />, children: [
-
-  ] }
-]);
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      { index: true, element: <App /> },
+      { path: 'login', element: <Login /> },
+      { path: 'signup', element: <Signup /> },
+      { path: 'join/:token', element: <Join /> },
+    ]
+  }
+])
 
 const rootElement = document.getElementById('root');
 

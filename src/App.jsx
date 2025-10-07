@@ -1,13 +1,16 @@
-import Countdown from './components/Countdown'
-
+import Button from './components/ui/button'
+import { Link } from 'react-router-dom'
 
 export default function App() {
-
   return (
-    <>
-      <h1>Workshop</h1>
-      <Countdown />
-    </>
+    <div className="space-x-5 flex items-center justify-center">
+      <Link to="/login">
+        <Button className="cursor-pointer">Créer / continuer une partie</Button>
+      </Link>
+      <Link to="/join">
+        <Button className="cursor-pointer">Rejoindre une partie</Button>
+      </Link>
+    </div>
   )
 }
 
