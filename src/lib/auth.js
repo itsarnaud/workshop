@@ -10,6 +10,7 @@ export const removeToken = () => {
 }
 
 export const isTokenValid = (token) => {
+  if (!token) return false;
   const payload = jwtDecode(token)
   if (!payload) return false
   if (!payload.exp) return false

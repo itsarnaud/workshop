@@ -7,9 +7,6 @@ export default function App() {
       <Link to="/login">
         <Button className="cursor-pointer">Créer / continuer une partie</Button>
       </Link>
-      <Link to="/join">
-        <Button className="cursor-pointer">Rejoindre une partie</Button>
-      </Link>
     </div>
   )
 }

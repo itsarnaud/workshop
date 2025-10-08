@@ -4,6 +4,8 @@ import Button from '@/components/ui/button'
 import Cookies      from 'js-cookie'
 import { useState } from 'react'
 import { Link, useNavigate, useLocation }     from 'react-router-dom'
+import { useEffect } from 'react'
+import { getToken, isTokenValid } from '@/lib/auth'
 
 export default function Login() {
   const [form, setForm] = useState({ email: '', password: '' })
@@ -11,6 +13,15 @@ export default function Login() {
   const navigate = useNavigate()
   const location = useLocation()
   const from = location.state?.from?.pathname || '/'
+
+  useEffect(() => {
+    const token = getToken();
+    const isValid = isTokenValid(token);
+
+    if (isValid) {
+      navigate('/games', { replace: true });
+    }
+  }, [navigate])
 
   const onChange = (e) => {
     const { name, value } = e.target
