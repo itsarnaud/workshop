@@ -1,11 +1,12 @@
 import { Navigate, useLocation } from 'react-router-dom'
-import { getToken, isTokenValid } from '@/lib/auth'
+import { getRole, getToken, isTokenValid } from '@/lib/auth'
 
 export default function RequireAuth({ children }) {
-  const location = useLocation()
-  const token    = getToken()
+  const location = useLocation();
+  const token    = getToken();
+  const role     = getRole();
 
-  if (!token || !isTokenValid(token)) {
+  if (!token || !isTokenValid(token) || role === 'guest') {
     return <Navigate to="/login" state={{ from: location }} replace />
   }
 

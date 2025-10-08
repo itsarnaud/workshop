@@ -1,8 +1,12 @@
+import { getRole } from "@/lib/auth"
 
 export default function Game() {
+  const role = getRole();
 
   return(
-    <>hey</>
+    <div>
+      <h1>Vous êtes {role}</h1>
+    </div>
   )
 }
 

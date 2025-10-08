@@ -5,6 +5,15 @@ export const getToken = () => {
   return Cookies.get('token')
 }
 
+export const getRole = () => {
+  const token = getToken();
+  if (!token) return false;
+  const user  = getUserFromToken(token);
+
+  if (user.role === 'owner') return 'owner';
+  return 'guest';
+}
+
 export const removeToken = () => {
   Cookies.remove('token')
 }

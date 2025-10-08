@@ -12,6 +12,7 @@ import Join   from './pages/auth/join'
 import Games  from './pages/games'
 import RequireAuth from './components/RequireAuth'
 import Game from './pages/game'
+import GameLayout from './pages/game/layout'
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,13 @@ const router = createBrowserRouter([
       { path: 'signup', element: <Signup /> },
       { path: 'join/:token', element: <Join /> },
       { path: 'games', element: <RequireAuth><Games /></RequireAuth> },
-      { path: 'game/:id', element: <Game /> }
+    ]
+  },
+  {
+    path: '/game/:id/',
+    element: <GameLayout />,
+    children: [
+      { index: true, element: <Game /> }
     ]
   }
 ])

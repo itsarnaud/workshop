@@ -33,7 +33,7 @@ export default function Join() {
 
       const data = await response.json();
       if (response.ok) {
-        Cookies.set('guest_token', data.token);
+        Cookies.set('token', data.token);
 
         try {
           if (data.game_id) socket.emit('joinGame', { gameId: data.game_id, role: 'guest' });

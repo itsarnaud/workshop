@@ -5,7 +5,7 @@ import Cookies      from 'js-cookie'
 import { useState } from 'react'
 import { Link, useNavigate, useLocation }     from 'react-router-dom'
 import { useEffect } from 'react'
-import { getToken, isTokenValid } from '@/lib/auth'
+import { getRole, getToken, isTokenValid } from '@/lib/auth'
 
 export default function Login() {
   const [form, setForm] = useState({ email: '', password: '' })
@@ -15,10 +15,11 @@ export default function Login() {
   const from = location.state?.from?.pathname || '/'
 
   useEffect(() => {
-    const token = getToken();
+    const token   = getToken();
     const isValid = isTokenValid(token);
+    const role    = getRole();
 
-    if (isValid) {
+    if (isValid && role === 'owner') {
       navigate('/games', { replace: true });
     }
   }, [navigate])

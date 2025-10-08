@@ -3,7 +3,7 @@ import Label  from '@/components/ui/label'
 import Button from '@/components/ui/button'
 import { useState, useEffect } from 'react'
 import { Link, useNavigate }     from 'react-router-dom'
-import { getToken, isTokenValid } from '@/lib/auth'
+import { getToken, isTokenValid, getRole } from '@/lib/auth'
 
 export default function Signup() {
   const [form, setForm] = useState({ email: '', password: '', username: '' })
@@ -11,10 +11,11 @@ export default function Signup() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    const token = getToken();
+    const token   = getToken();
     const isValid = isTokenValid(token);
+    const role    = getRole();
 
-    if (isValid) {
+    if (isValid && role === 'owner') {
       navigate('/games', { replace: true });
     }
   }, [navigate])
