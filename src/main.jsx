@@ -28,7 +28,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/game/:id/',
-    element: <GameLayout />,
+    element: <RequireAuth allowGuest><GameLayout /></RequireAuth>,
     children: [
       { index: true, element: <Game /> }
     ]

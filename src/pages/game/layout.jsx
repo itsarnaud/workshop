@@ -1,6 +1,8 @@
 import { Outlet, useParams, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { getToken, getUserFromToken } from '@/lib/auth'
+import Sidebar from '@/components/Sidebar'
+import Countdown from '@/components/Countdown'
 
 export default function GameLayout() {
   const { id } = useParams()
@@ -31,7 +33,7 @@ export default function GameLayout() {
         const game = await res.json()
 
         const payload = getUserFromToken(token) || {};
-        const user_id = payload.user_id;
+        const user_id = payload.user_id || payload.guest_id;
 
         const isOwner = game.user && game.user.id === user_id
         const isGuest = Array.isArray(game.guests) && game.guests.some(g => g.id === user_id)
@@ -54,9 +56,17 @@ export default function GameLayout() {
   if (checking) return null
 
   return (
-    <>
-      <Outlet />
-    </>
+    <main>
+      <Sidebar />
+      <div className="ml-[300px]">
+        <div className="w-full flex items-center justify-center h-[82px] p-2">
+          <Countdown />
+        </div>
+        <div className="px-4 py-6">
+          <Outlet />
+        </div>
+      </div>
+    </main>
   )
 }
 

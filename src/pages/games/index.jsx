@@ -116,6 +116,13 @@ export default function Games() {
     getGames();
   }, []);
 
+  function formatTimeLeft(seconds) {
+    if (typeof seconds !== 'number' || isNaN(seconds)) return '';
+    const m = Math.floor(seconds / 60);
+    const s = seconds % 60;
+    return `${m}:${s.toString().padStart(2, '0')}`;
+  }
+
   return (
     <section>
       {loading && 
@@ -128,16 +135,21 @@ export default function Games() {
             <Item key={game.id ?? index} variant="outline">
               <ItemContent>
                 <ItemTitle>Partie n°{index+1}</ItemTitle>
+                <ItemDescription className="flex">
                 {game.guests.length ? 
-                  <ItemDescription>
+                  <div>
                     Avec {game.guests.map((guest, gindex) => (
                       <span key={guest.id ?? guest.username ?? gindex}>{guest.username}</span>
-                    ))}
-                  </ItemDescription> : ''
+                    ))} 
+                  </div> : ''
                 }
+                <span>
+                  &nbsp;- {game.game_over ? 'Partie terminé' : `Temps restant : ${formatTimeLeft(game.time_left)}`}
+                </span>
+                </ItemDescription>
               </ItemContent>
               <ItemActions>
-                <Button variant="outline" size="sm">
+                <Button variant="outline" size="sm" className="cursor-pointer" onClick={() => navigate(`/game/${game.id}`, { replace: true })} disabled={game.game_over}>
                   Reprendre la partie
                 </Button>
               </ItemActions>

@@ -1,0 +1,70 @@
+{
+  "1": {
+    "title": "Un peu de calcul.",
+    "enigma": "Le paracétamol, aussi appelé acétaminophène, est un composé chimique utilisé comme antalgique (anti-douleur) et antipyrétique (anti fièvre), qui figure depuis le début des années 1950 parmi les médicaments les plus communément utilisés et prescrits au monde. Sa formule est la suivante C8H9NO2. Il devient auto-inflammable à 540°C. Il devient toxique pour le foie au dela de 6 grammes par jour. En vous servant de ces informations et de la page Wikipedia du paracétamol, pour trouver le premier chiffre, additionner les atomes de la formule. Multiplier par la dose toxique. Enfin, diviser le tout par le nombre de millions de boîte de paracétamol vendues en 2025.  Le chiffre des centièmes sera une partie du code.",
+    "asnwer": "2",
+    "hint": "",
+    "digit": "4"
+  },
+
+  "2": {
+    "title": "Une brève histoire du rhume.",
+    "enigma": "Bien que les causes du rhume aient été découvertes durant les années 1950, la maladie suit en réalité l'humanité depuis l'Antiquité, en mutant fortement. Ses symptômes et traitements ont été décrits dans le papyrus Ebers, le plus ancien texte médical, rédigé au XVIe siècle av. J.-C. La compréhension actuelle du rhume a commencé en 1914, lorsque le Dr Walther Kruse a montré que les sécrétions nasales des personnes atteintes d'un rhume pouvaient être filtrées pour les débarrasser des bactéries et que l'inoculation de ces lavages filtrés dans le nez des receveurs provoquait la même maladie. Christopher Andrewes et David Tyrrell ont peaufiné ces expériences au Harvard Hospital, de Salisbury, en Angleterre. Vers 1946, cet hôpital est devenu la Common Cold Unit du Medical Research Council. L'unité de recherche sur le rhume a été créée par le Medical Research Council après que le Dr Andrewes ait promu l'idée de recherches sur des volontaires et persuadé les autorités de créer la station de recherche. Pendant les 43 ans d'existence de la CCU, des milliers de volontaires ont participé à des recherches, inoculés avec des virus du rhume ou faisant partie d'un groupe témoin, mais aucun remède contre le rhume n'a été trouvé. Winston Price professeur d'épidémiologie américain est le premier scientifique à avoir tenté sans succès de fabriquer un vaccin contre le rhume en 1957. Price avait réussi à isoler un rhinovirus qu'il a nommé « virus JH » d'après son employeur, l'université Johns-Hopkins de Baltimore. La fabrication d'un vaccin contre le virus JH a défrayé la chronique, les journaux à travers les États-Unis voulaient savoir si le rhume était enfin guéri. Malheureusement l'expérimentation du vaccin n'a pas été à la hauteur des espoirs suscités, ce qui indiquait qu’il existait d'autres virus ; Winston est finalement devenu le premier scientifique à avoir distingué un virus, dans le fouillis d’autres virus du rhume.",
+    "answer": "3",
+    "hint": "Peut-être qu'en faisant une opération mathématique sur deux dates, et qu'en gardant uniquement l'unité de la dizaine, vous pourriez trouver une partie du code...",
+    "digit": "8"
+  },
+
+  "3": {
+    "title": "Trouvez le bon chiffre.",
+    "enigma": "Quand le rhume s’invite, il transforme les journées les plus simples en petites épreuves. On remarque parfois quatre petits signes avant-coureurs, à peine perceptibles : un frisson furtif, un éternuement qui s’échappe, un léger picotement aux yeux et une gorge un peu irritée. Ces sensations se succèdent sans prévenir, et il devient essentiel de prendre soin de soi. Certains choisissent de se reposer dans un fauteuil confortable, en ajustant leur position quatre fois pour trouver le soutien parfait, tandis que d’autres préfèrent rester allongés sous un plaid chaud. Les moments de calme sont précieux, surtout lorsque les symptômes apparaissent par vagues, chacune semblant durer quatre minutes ou plus avant de s’estomper. Même les gestes simples, comme boire un verre d’eau ou se moucher, peuvent nécessiter une attention particulière, parfois répétée quatre fois avant de se sentir soulagé. Pourtant, malgré ces petits désagréments, le corps sait comment se régénérer, et un peu de repos suffit souvent à atténuer quatre frissons successifs qui menacent de troubler la journée.",
+    "answer": "4",
+    "hint": "Il s'agit de regarder le numéro qui apparait plusieurs fois dans le texte.",
+    "digit": "2"
+  },
+
+  "4": {
+    "title": "Le tableau périodique des éléments.",
+    "enigma": "Pour ouvrir le coffre contenant les remèdes contre le rhume, le scientifique a caché le code dans les numéros atomiques de certains éléments essentiels à la potion : e Néodyme, le Stannum, le Brome et le Zirconium.",
+    "answer": "5",
+    "hint": "Un petit calcul pourrait vous aider : - + -.",
+    "digit": "7"
+  },
+
+  "5": {
+    "title": "Trouve le mot caché.",
+    "enigma": "Sur la paillasse, 4 flacons portent ces étiquettes : H₂O, NaCl, C₆H₁₂O₆, CH₃COOH. « La formule du salut est celle qui contient le plus d’atomes de carbone. »",
+    "answer": "glucose",
+    "hint": "Comment s'appelle cette molécule ?",
+    "digit": "1"
+  },
+
+  "6": {
+    "title": "Qui suis-je ? #1",
+    "enigma": "J’ai un pH acide dans l’estomac, j’aide à digérer les protéines en activant des enzymes et à tuer des microbes avalés. Ma production excessive peut causer des brûlures. Qui suis-je ?",
+    "answer": "acide chlorhydrique",
+    "hint": "",
+    "digit": "5"
+  },
+
+  "7": {
+    "title": "Qui suis-je ? #2",
+    "enigma": "Je suis un examen d’imagerie non invasif qui utilise des ondes sonores pour visualiser les organes mous. On m’emploie pour observer un fœtus pendant la grossesse, examiner le foie, le cœur ou les reins. Qui suis-je ? ",
+    "answer": {
+      "A": "La radiographie",
+      "B": "L’échographie",
+      "C": "Le scanner (CT-scan)",
+      "D": "L’IRM (Imagerie par Résonance Magnétique)"
+    },
+    "hint": "",
+    "digit": "3"
+  },
+
+  "8": {
+    "title": "Qui suis-je ? #3",
+    "enigma": "Dans ton corps, je suis partout, mais invisible à l’œil nu. Je circule en continu, transportant de l’oxygène depuis tes poumons jusqu’aux muscles qui te permettent de courir, de sauter et de réfléchir. Je récupère ensuite le dioxyde de carbone produit par tes cellules et je le ramène pour être expulsé quand tu respires. Si j’étais absent ou défectueux, tu serais vite essoufflé et fatigué. Qui suis-je ?",
+    "answer": "le sang",
+    "hint": "",
+    "digit": "9"
+  }
+}
